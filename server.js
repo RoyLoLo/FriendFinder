@@ -1,4 +1,4 @@
-const mysql = require(`mysql`);
+
 const path = require(`path`);
 const bP = require(`body-parser`);
 const express = require(`express`);

@@ -1,23 +1,19 @@
-let friendsjs = {
-  fArr : [{
-            rname: "steven",
-            name: "Steve",
+let friendsjs =  [{
+            name: "steve",
             age: 25,
-            sex: "male"
+            sex: "male",
+            image: "https://cdn.cnn.com/cnnnext/dam/assets/170704145417-urkel-1-large-11.jpg",
+            scores :[5,3,1,3,5]
           },
           {
-            rname: "mildred",
-            name: "Milly",
+            name: "milly",
             age: 27,
-            sex: "female"
+            sex: "female",
+            image: "https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/Stranger-Things-Eleven.jpg",
+            scores : [2,4,2,4,2]
           }
-        ],
-fadd : (rname,name,age,sex)=>{
-  this.rname = rname;
-  this.name = name;
-  this.age = age;
-  this.sex = sex;
-}
-};
+        ];
+
+
 
 module.exports = friendsjs;

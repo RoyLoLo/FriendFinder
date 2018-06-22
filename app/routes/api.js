@@ -6,9 +6,9 @@ const friends = require(`../data/friends.js`)
 
 router.get(`/friends/:friend`, (req, res) => {
   let choice = req.params.friend;
-  for (i = 0; i < friends.fArr.length; i++) {
-    if (choice === friends.fArr[i].rname) {
-      return res.json(friends.fArr[i]);
+  for (i = 0; i < friends.length; i++) {
+    if (choice === friends[i].rname) {
+      return res.json(friends[i]);
     }
   }
   return res.json(false);
@@ -16,15 +16,15 @@ router.get(`/friends/:friend`, (req, res) => {
 
 router.get(`/friends`, (req, res) => {
 
-  return res.json(friends.fArr);
+  return res.json(friends);
 });
 
 router.post(`/friends`, (req, res) => {
   var newfriend = req.body;
-  newfriend.rname = newfriend.name.replace(/\s+/g, ).toLowerCase();
-  friends.fArr.push(newfriend);
-  res.json("");
-  
+  newfriend.name = newfriend.name.replace(/\s+/g, ).toLowerCase();
+  friends.push(newfriend);
+
+  res.json(friends);
 });
 
 
